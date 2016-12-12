@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>发布</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_kww6bajfumzpvi.css">
+</head>
+<body>
+    <div class="app">
+        <div class="app-header row w">
+            <div class="col left v-m t-c">
+                <span>取消</span>
+            </div>
+            <div class="col t-c v-m">
+                <h1 class="fs-14 c-f"></h1>
+            </div>
+            <div class="col right v-m t-c">
+                <span>发送</span>
+            </div>
+        </div>
+        <div class="app-content">
+            <div class="app-main-content">
+                <div class="row w ptb-20">
+                    <div class="col v-m t-c">
+                        <span class="uploads">
+                            <i class="iconfont icon-add"></i>
+                            <input type="file">
+                        </span>
+                    </div>
+                </div>
+                <div class="text w">
+                    <textarea id="publish" rows="5" cols="" placeholder="说说照片背后的故事呗~"></textarea>
+                    <p class="num t-r">0/140</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload=function(){
+            var max=140;
+            var text=document.getElementById("publish");
+            text.onkeydown=function(){
+                var c=this.value.length;
+                if(c>=max){
+                    this.value=this.value.substring(0,max);
+                    document.getElementsByTagName("p")[0].innerHTML="0/"+max;
+                }else{
+                    document.getElementsByTagName("p")[0].innerHTML=max-c+"/"+max;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

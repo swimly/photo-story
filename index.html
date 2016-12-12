@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>传音</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="index">
+  <div class="app focus">
+    <div class="login">
+      <ul class="panel">
+        <li class="row w">
+          <span class="col v-m iconfont icon-user c-yellow"></span>
+          <span class="col v-m">
+            <input class="input" type="text" placeholder="工号">
+          </span>
+        </li>
+        <li class="row w">
+          <span class="col v-m iconfont icon-name c-yellow"></span>
+          <span class="col v-m">
+            <input class="input" type="text" placeholder="姓名">
+          </span>
+        </li>
+      </ul>
+      <a href="subpage.html" class="btn w mt-20">登录</a>
+      <p class="t-c mt-20">
+        <a class="link" href="javascript:;" id="rule">规则介绍</a>
+      </p>
+    </div>
+    <div class="pop-wrap">
+      <div class="pop">
+        <a href="javascript:;" class="close iconfont icon-close"></a>
+        <h2>规则介绍</h2>
+        <p>报名方式：扫描二维码，添加QQ好友，</p>
+        <p style="padding-left:6rem;">发送姓名+部门+参加赛区</p>
+        <p>截止日期：2016年12月8日</p>
+        <p>赛事安排：甄选采用深圳和上海两地同期进行</p>
+        <p>第一轮-海选：2016年12月9日</p>
+        <p>第二轮-线上投票：2016年12/14-16日</p>
+        <p>每位报名参与的童靴们，均有机会获得神秘大礼。</p>
+        <p class="t-r" style="margin-top:3rem;">未经事宜，以2017年会筹备组公布为准。</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    $("#rule").click(function(){
+      $(".app").addClass("show-pop")
+      $(".pop .close").click(function(){
+        $(".app").removeClass("show-pop")
+      })
+    })
+    // $("input").focus(function(){
+    //   $(".app").addClass("focus");
+    // })
+    // $("input").blur(function(){
+    //   $(".app").removeClass("focus");
+    // })
+  </script>
+</body>
+</html>

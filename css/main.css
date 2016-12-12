@@ -1,0 +1,70 @@
+html,body{height:100%;margin:0;overflow:hidden;}
+a{-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;}
+table{table-layout:fixed;border-spacing:0;border-collapse: collapse;}
+ul{padding:0;margin:0;list-style:none;}
+h1,h2,h3,h4,b{font-weight:normal;margin:0;}
+i{font-style:normal;}
+html{font-size:calc(100vw/37.5);}/*iphone 6*/
+body,input{font-family:microsoft yahei,Helvetica;}
+input:focus{outline:none;}
+*{box-sizing:border-box;}
+input:focus,textarea:focus{outline:none;}
+
+
+.row{display:table;table-layout:fixed;}
+.col{display:table-cell;}
+.w{width:100%;}.h{height:100%;}.w-50{width:50%;}.w-40{width:40%;}.w-30{width:30%;}
+.v-t{vertical-align:top;}.v-m{vertical-align: middle;}.v-b{vertical-align: bottom;}
+.t-c{text-align:center;}.t-r{text-align:right;}
+.c-yellow{color:#D5B67D;}.c-red{color:#D40001;}.c-9{color:#999;}.c-3{color:#333;}.c-f{color:#fff;}.c-n{color:#2F2E33;}
+.f-b{font-weight:bold;}
+.fs-12{font-size:1.2rem;}.fs-14{font-size:1.4rem;}.fs-22{font-size:2.2rem;}.fs-16{font-size:1.6rem;}
+.mt-20{margin-top:2rem;}.mt-10{margin-top:1rem;}.mr-3{margin-right:0.3rem;}
+.plr-20{padding-left:2rem;padding-right:2rem;}.ptb-20{padding-top:2rem;padding-bottom:2rem;}
+
+
+.app{width:100%;height:100%;overflow:hidden;padding-top:3.6rem;}
+.app.has-footer{padding-bottom:4rem;}
+.app-header{height:3.6rem;background:#FFD500;position:relative;margin-top:-3.6rem;line-height:3.6rem;}
+.app-header .left,.app-header .right{width:3.6rem;}
+
+.app-content{height:100%;overflow:hidden;}
+.app-content-tab{height:3.6rem;line-height:3.6rem;background:#FFD500;position:relative;margin-top:-3.6rem;}
+.app-content-tab.has-left{padding-left:3.6rem;}
+.app-content-tab.has-right{padding-right:3.6rem;}
+.tab-left{width:3.6rem;position:absolute;left:0;top:0;text-align:center;}
+.tab-left:before{content:"";display:inline-block;width:0.1rem;height:2.4rem;background:#D0AF0B;position:absolute;right:0;top:50%;margin-top:-1.2rem;}
+.tab-right{width:3.6rem;position:absolute;right:0;top:0;text-align:center;}
+.tab-right:before{content:"";display:inline-block;width:0.1rem;height:2.4rem;background:#D0AF0B;position:absolute;left:0;top:50%;margin-top:-1.2rem;}
+.tab-info a{padding:0 0.5em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.app-main-content{height:100%;overflow-y:auto;overflow-x:hidden;padding:1rem;}
+
+.app-footer{height:4rem;background:#2E2E32;position:relative;}
+.app-footer .text{display:block;}
+.app-footer .upload{position:absolute;width:4rem;height:4rem;background:#FFD500;border:0.2rem solid #333;border-radius:50%;left:50%;top: -2rem;margin-left:-2rem;}
+.upload .iconfont{font-size:2.2rem;position:relative;top:0.5rem;}
+.app-footer a:hover{color:#FFD500;}
+
+.uploads{display:inline-block;background:#FAD51A;position:relative;overflow:hidden;}
+.uploads input{font-size:10rem;position:absolute;top:-1rem;left:0;opacity:0;}
+.uploads .iconfont{display:inline-block;width:8rem;height:8rem;font-size:4rem;color:#fff;line-height:8rem;}
+.text{display:inline-block;}
+.text textarea{width:100%;border:none;resize:none;font-size:1.4rem;color:#444;font-family:"微软雅黑";padding:1rem;box-sizing:border-box;line-height:1.5;}
+.text textarea::-webkit-input-placeholder{color:#B2B2B2;}
+.text .num{padding-right:1rem;font-size:1.4rem;color:#2F2E33;}
+.app-header.tab .col{width:33.3%;}
+.app-header.tab .col.setting{width:4rem;position:relative;}
+.app-header.tab .col.setting:before{content:"";display:inline-block;width:1px;height:1.6rem;background:#221815;position:absolute;left:0;top:50%;margin-top:-0.8rem;}
+.app-header.tab .col.back{width:4rem;position:relative;}
+.app-header.tab .col.back:after{content:"";display:inline-block;width:1px;height:1.6rem;background:#221815;position:absolute;right:0;top:50%;margin-top:-0.8rem;}
+.list{margin-bottom:1rem;position:relative;transition:0.5s;}
+.list .col{padding:0 1rem;box-sizing: border-box;}
+.list .col:first-child{width:6rem;padding:0;}
+.list .col.zf{width:6rem;padding:0;}
+.list .col.cf{width:9rem;padding:0;}
+.cf img{width:100%;height:6rem;}
+.zf img{width:100%;height:6rem;}
+.list .uploads .iconfont{width:6rem;height:6rem;line-height:6rem;}
+.list .delete{position:absolute;right:-7rem;top:0;height:6rem;width:3rem;background:#FAD51A;padding:1.5rem 1rem;color:#2F2E33;transition:0.3s;}
+.list.manage .delete{right:-1rem;}
+.list.deleting{margin-left:-110%;height:0;opacity:0;}

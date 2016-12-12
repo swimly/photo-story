@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_kww6bajfumzpvi.css">
+</head>
+<body>
+    <div class="app has-footer">
+        <div class="app-header row w tab fs-14">
+            <div class="col v-m t-c">
+                <span class="iconfont icon-user"></span>
+                <span>@大气气气</span>
+            </div>
+            <div class="col v-m t-c">
+                <span class="iconfont icon-xihuan"></span>
+                <span>15000</span>
+            </div>
+            <div class="col v-m t-c">
+                <span class="iconfont icon-comiisfatupian"></span>
+                <span>12</span>
+            </div>
+            <div class="col v-m t-c setting">
+                <span class="iconfont icon-shezhi"></span>
+            </div>
+        </div>
+        <div class="app-content">
+            <div class="app-main-content">
+                <ul class="list row w c-n">
+                    <li class="col v-t"><span class="fs-22">今天</span></li>
+                    <li class="col v-t zf">
+                        <a href="发布.html" class="uploads">
+                            <i class="iconfont icon-add t-c"></i>
+                        </a>
+                    </li>
+                    <li class="col v-t fs-14"></li>
+                </ul>
+                <ul class="list row w c-n">
+                    <li class="col v-t"><span class="fs-22">19</span><span class="fs-12">12月</span></li>
+                    <li class="col v-t zf"><img src="img/001.png" alt=""></li>
+                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                </ul>
+                <ul class="list row w c-n">
+                    <li class="col v-t"><span class="fs-22">8</span><span class="fs-12">12月</span></li>
+                    <li class="col v-t zf"><img src="img/002.png" alt=""></li>
+                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                </ul>
+                <ul class="list row w c-n">
+                    <li class="col v-t"><span class="fs-22">7</span><span class="fs-12">12月</span></li>
+                    <li class="col v-t zf"><img src="img/001.png" alt=""></li>
+                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                </ul>
+                <ul class="list row w c-n">
+                    <li class="col v-t"></li>
+                    <li class="col v-t zf"><img src="img/002.png" alt=""></li>
+                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-footer row w">
+            <a href="javascript:;" class="col v-m t-c w-50 c-f">
+                <span class="iconfont icon-time"></span>
+                <span class="fs-14 text">实时</span>
+            </a>
+            <a href="javascript:;" class="col v-m t-c w-50 c-f">
+                <span class="iconfont icon-paixing"></span>
+                <span class="fs-14 text">排行</span>
+            </a>
+            <div class="upload row w">
+                <a href="发布.html" class="col v-m c-3 t-c">
+                    <span class="iconfont icon-zhaoxiangji"></span>
+                    <span class="fs-14 text">发布</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(".icon-shezhi").click(function(){
+            $(".list").toggleClass("manage")
+            $(".delete").click(function(){
+                var list=$(this).parents(".list");
+                list.addClass("deleting");
+                setTimeout(function(){
+                    list.remove();
+                },500)
+            })
+        })
+    </script>
+</body>
+</html>
