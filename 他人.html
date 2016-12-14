@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="app has-footer">
-        <a class="app-header row w tab fs-14">
+        <div class="app-header row w tab fs-14">
             <a class="col v-m t-c back" href="我的.html">
                 <span class="iconfont icon-back"></span>
             </a>
@@ -31,22 +31,22 @@
                 <ul class="list row w c-n">
                     <li class="col v-t t-r"><span class="fs-22">19</span><span class="fs-12">12月</span></li>
                     <li class="col v-t cf"><img src="img/003.png" alt=""></li>
-                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                    <li class="col v-t fs-14 title" title="2015年，传音拳王争霸赛，和小伙伴激动了一整天。">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
                 </ul>
                 <ul class="list row w c-n">
                     <li class="col v-t t-r"><span class="fs-22">8</span><span class="fs-12">12月</span></li>
                     <li class="col v-t cf"><img src="img/004.png" alt=""></li>
-                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                    <li class="col v-t fs-14 title" title="2015年，传音拳王争霸赛，和小伙伴激动了一整天。">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
                 </ul>
                 <ul class="list row w c-n">
                     <li class="col v-t t-r"><span class="fs-22">7</span><span class="fs-12">12月</span></li>
                     <li class="col v-t cf"><img src="img/003.png" alt=""></li>
-                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                    <li class="col v-t fs-14 title" title="2015年，传音拳王争霸赛，和小伙伴激动了一整天。">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
                 </ul>
                 <ul class="list row w c-n">
                     <li class="col v-t t-r"></li>
                     <li class="col v-t cf"><img src="img/004.png" alt=""></li>
-                    <li class="col v-t fs-14">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
+                    <li class="col v-t fs-14 title" title="2015年，传音拳王争霸赛，和小伙伴激动了一整天。">2015年，传音拳王争霸赛，和小伙伴激动了一整天。<a href="javascript:;" class="delete">删除</a></li>
                 </ul>
             </div>
         </div>
@@ -79,6 +79,15 @@
                 },500)
             })
         })
+        $(".list").click(function(){
+            pop($(this).find(".title").attr("title"),$(this).find("img").attr("src"))
+        })
+        function pop(title,img){
+            $('<div class="row w h popBox"><div class="col v-m t-c"><div class="img"><img src="'+img+'"/></div><p class="title">'+title+'</p></div></div>').appendTo($(document.body));
+            $(".popBox").click(function(){
+                $(this).hide().remove();
+            })
+        }
     </script>
 </body>
 </html>

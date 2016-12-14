@@ -32,7 +32,7 @@
                     <span class="row w">
                         <i class="col v-m c-9">2016-12-19</i>
                         <i class="col v-m t-r c-y">
-                            <i class="iconfont icon-loveline fs-14"></i>
+                            <i class="iconfont icon-loveline fs-14 love"></i>
                             <i>3000</i>
                             <i class="iconfont icon-fenxiang fs-14 ml-20"></i>
                         </i>
@@ -45,7 +45,7 @@
                     <span class="row w">
                         <i class="col v-m c-9">2016-12-19</i>
                         <i class="col v-m t-r c-y">
-                            <i class="iconfont icon-loveline fs-14"></i>
+                            <i class="iconfont icon-loveline fs-14 love"></i>
                             <i>3000</i>
                             <i class="iconfont icon-fenxiang fs-14 ml-20"></i>
                         </i>
@@ -58,7 +58,7 @@
                     <span class="row w">
                         <i class="col v-m c-9">2016-12-19</i>
                         <i class="col v-m t-r c-y">
-                            <i class="iconfont icon-loveline fs-14"></i>
+                            <i class="iconfont icon-loveline fs-14 love"></i>
                             <i>3000</i>
                             <i class="iconfont icon-fenxiang fs-14 ml-20"></i>
                         </i>
@@ -71,7 +71,7 @@
                     <span class="row w">
                         <i class="col v-m c-9">2016-12-19</i>
                         <i class="col v-m t-r c-y">
-                            <i class="iconfont icon-loveline fs-14"></i>
+                            <i class="iconfont icon-loveline fs-14 love"></i>
                             <i>3000</i>
                             <i class="iconfont icon-fenxiang fs-14 ml-20"></i>
                         </i>
@@ -99,12 +99,33 @@
     <div class="guide"></div>
     <script src="js/zepto.min.js"></script>
     <script>
-        $(".icon-fenxiang").click(function(){
+        $(".icon-fenxiang").click(function(e){
+            e.stopPropagation();
             $(".guide").show();
             $(".guide").click(function(){
                 $(this).hide();
             })
         })
+        $(".love").click(function(e){
+            e.stopPropagation();
+            if($(this).hasClass("icon-loveline")){
+                $(this).addClass("icon-love").removeClass("icon-loveline")
+                $(this).next().text(parseInt($(this).next().text())+1)
+            }else{
+                $(this).addClass("icon-loveline").removeClass("icon-love")
+                $(this).next().text(parseInt($(this).next().text())-1)
+            }
+        })
+        $(".list-item").click(function(e){
+            e.stopPropagation();
+            pop($(this).find(".text").text(),$(this).find("img").attr("src"))
+        })
+        function pop(title,img){
+            $('<div class="row w h popBox"><div class="col v-m t-c"><div class="img"><img src="'+img+'"/></div><p class="title">'+title+'</p></div></div>').appendTo($(document.body));
+            $(".popBox").click(function(){
+                $(this).hide().remove();
+            })
+        }
     </script>
 </body>
 </html>
